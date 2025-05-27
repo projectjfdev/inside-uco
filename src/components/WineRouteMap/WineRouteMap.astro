@@ -1,0 +1,137 @@
+---
+// WineRouteMap.astro - Wine Route location map component
+---
+
+<section class="bg-stone-200 py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left side: Text content -->
+      <div class="space-y-6">
+        <h2 class="text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
+          En el corazón de la<br />
+          Ruta del Vino
+        </h2>
+        <div class="space-y-4 text-gray-700">
+          <p class="text-lg leading-relaxed">
+            <span class="font-medium">INSIDE UCO</span> se encuentra rodeado de las 
+            bodegas más emblemáticas del Valle de Uco.
+          </p>
+          <p class="text-lg leading-relaxed">
+            A menos de 30' de los nombres que hicieron 
+            de Mendoza una referencia mundial
+          </p>
+        </div>
+      </div>
+
+      <!-- Right side: Wine route map -->
+      <div class="relative h-96 lg:h-[500px]">
+        <!-- SVG Map Container -->
+        <svg 
+          viewBox="0 0 600 400" 
+          class="w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Route lines -->
+          <g stroke="#4a4a4a" stroke-width="2" fill="none">
+            <!-- Main horizontal route -->
+            <line x1="50" y1="200" x2="550" y2="200" />
+            
+            <!-- Vertical connections -->
+            <line x1="120" y1="120" x2="120" y2="200" />
+            <line x1="80" y1="200" x2="80" y2="280" />
+            <line x1="500" y1="80" x2="500" y2="200" />
+            <line x1="520" y1="200" x2="520" y2="320" />
+            
+            <!-- Diagonal connections -->
+            <line x1="400" y1="200" x2="500" y2="80" />
+            <line x1="400" y1="200" x2="520" y2="320" />
+          </g>
+
+          <!-- Location markers (small circles) -->
+          <g fill="#8a8a8a" stroke="#4a4a4a" stroke-width="1">
+            <circle cx="120" cy="120" r="6" />
+            <circle cx="80" cy="280" r="6" />
+            <circle cx="150" cy="200" r="6" />
+            <circle cx="200" cy="200" r="6" />
+            <circle cx="250" cy="200" r="6" />
+            <circle cx="300" cy="200" r="6" />
+            <circle cx="350" cy="200" r="6" />
+            <circle cx="500" cy="80" r="6" />
+            <circle cx="520" cy="320" r="6" />
+            <circle cx="550" cy="200" r="6" />
+          </g>
+
+          <!-- INSIDE UCO - Main location (large circle) -->
+          <g>
+            <circle cx="400" cy="200" r="25" fill="none" stroke="#2a2a2a" stroke-width="3" />
+            <text x="400" y="205" text-anchor="middle" class="text-sm font-medium fill-gray-900">
+              INSIDE UCO
+            </text>
+          </g>
+
+          <!-- Route markers -->
+          <g class="text-xs fill-white">
+            <!-- R-90 marker -->
+            <rect x="105" y="105" width="30" height="15" fill="#2a2a2a" />
+            <text x="120" y="115" text-anchor="middle" class="text-xs fill-white">R-90</text>
+            
+            <!-- R-92 marker -->
+            <rect x="65" y="265" width="30" height="15" fill="#2a2a2a" />
+            <text x="80" y="275" text-anchor="middle" class="text-xs fill-white">R-92</text>
+            
+            <!-- R-89 marker -->
+            <rect x="505" y="305" width="30" height="15" fill="#2a2a2a" />
+            <text x="520" y="315" text-anchor="middle" class="text-xs fill-white">R-89</text>
+          </g>
+
+          <!-- Winery labels -->
+          <g class="text-sm fill-gray-600">
+            <!-- Left side wineries -->
+            <text x="120" y="100" text-anchor="middle">The Vines</text>
+            <text x="80" y="300" text-anchor="middle">Zuccardi</text>
+            
+            <!-- Main route wineries -->
+            <text x="150" y="190" text-anchor="middle">Salentein</text>
+            <text x="200" y="190" text-anchor="middle">Andeluna</text>
+            <text x="250" y="190" text-anchor="middle">La Estocada</text>
+            <text x="300" y="180" text-anchor="middle">Sophenia</text>
+            
+            <!-- Upper route -->
+            <text x="220" y="170" text-anchor="middle" class="text-xs">La Azul</text>
+            <text x="270" y="170" text-anchor="middle" class="text-xs">Riglos</text>
+            <text x="320" y="170" text-anchor="middle" class="text-xs">Rutini</text>
+            <text x="370" y="170" text-anchor="middle" class="text-xs">Domaine</text>
+            <text x="370" y="180" text-anchor="middle" class="text-xs">Bousquet</text>
+            
+            <!-- Right side locations -->
+            <text x="500" y="65" text-anchor="middle">Huentala Wines</text>
+            <text x="550" y="185" text-anchor="middle">Wine Land</text>
+            <text x="520" y="340" text-anchor="middle">Tupungato centro</text>
+            
+            <!-- Zone label -->
+            <text x="350" y="120" text-anchor="middle" class="text-xs">Zona Gualtallary</text>
+            <text x="520" y="280" text-anchor="middle" class="text-xs">La Consulta</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Ensure text in SVG renders properly */
+  svg text {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    svg text {
+      font-size: 12px;
+    }
+    
+    svg .text-xs {
+      font-size: 10px;
+    }
+  }
+</style>
