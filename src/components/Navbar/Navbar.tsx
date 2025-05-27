@@ -1,14 +1,12 @@
-
-
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  // dev
   return (
     <nav className="bg-[#282627] text-white">
       <div className="mx-auto px-4 sm:px-6 lg:px-16">
@@ -26,19 +24,34 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <a href="#" className="text-white hover:text-gray-300 transition-colors duration-200 font-light">
+                <a
+                  href="#"
+                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                >
                   Proyecto
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors duration-200 font-light">
+                <a
+                  href="#"
+                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                >
                   Bed & Wine
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors duration-200 font-light">
+                <a
+                  href="#"
+                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                >
                   Casas
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors duration-200 font-light">
+                <a
+                  href="#"
+                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                >
                   Fincas
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors duration-200 font-light">
+                <a
+                  href="#"
+                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                >
                   Guatallary
                 </a>
               </div>
@@ -58,8 +71,18 @@ export default function Navbar() {
               onClick={toggleMobileMenu}
               className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -108,5 +131,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
