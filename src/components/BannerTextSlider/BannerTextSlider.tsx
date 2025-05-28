@@ -11,7 +11,6 @@ interface Props {
   images: string[];
 }
 
-
 export default function BannerTextSlider({
   id,
   title,
@@ -49,7 +48,7 @@ export default function BannerTextSlider({
 
           <ul className="space-y-3 text-gray-800">
             {features.map((feature, index) => (
-              <li className="flex items-center">
+              <li className="flex items-center" key={features[index]}>
                 <span className="mr-3 mt-2 w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0"></span>
                 <span className="text-2xl font-[400]">{feature}</span>
               </li>
