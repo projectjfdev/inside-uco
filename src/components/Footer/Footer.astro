@@ -1,0 +1,72 @@
+---
+// Footer.astro
+---
+
+<footer class="bg-[#282727] text-white py-12 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Main footer content -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+      <!-- Left: Logo/Brand -->
+      <div class="mb-6 md:mb-0">
+        <div class="flex items-center space-x-4">
+          <div class="border-l-2 border-white h-8"></div>
+          <div>
+            <h2 class="text-2xl font-light tracking-wider">INSIDE UCO</h2>
+            <p class="text-sm text-gray-300 tracking-widest">VALLE DE UCO</p>
+          </div>
+          <div class="border-r-2 border-white h-8"></div>
+        </div>
+      </div>
+
+      <!-- Center: Contact Email -->
+      <div class="mb-6 md:mb-0 flex items-center space-x-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+        </svg>
+        <a href="mailto:info@insideuco.com.ar" class="text-white hover:text-gray-300 transition-colors">
+          info@insideuco.com.ar
+        </a>
+      </div>
+
+      <!-- Right: KDS Logo -->
+      <div>
+        <div class="text-right">
+          <h3 class="text-xl font-bold tracking-wider">KDS</h3>
+          <p class="text-sm text-gray-300 tracking-widest">KAPITAL DEL SUR</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separator line -->
+    <div class="border-t border-gray-700 mb-6"></div>
+
+    <!-- Legal text and copyright -->
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end space-y-4 lg:space-y-0">
+      <!-- Legal disclaimer -->
+      <div class="flex-1 lg:pr-8">
+        <p class="text-xs text-gray-400 leading-relaxed">
+          La presente documentación no constituye oferta vinculante alguna y los derechos y obligaciones estarán sólo sujetos a las condiciones 
+          de los instrumentos definitivos que se suscriban. Todas las imágenes, especificaciones y marcos definitivos para este 
+          emprendimiento, son preliminares y están sujetas a modificaciones. Las medidas expresadas son aproximadas. El amoblamiento, 
+          los muebles, accesorios y proporciones especificadas en los planos son aproximados y han sido colocados sólo a título indicativo. Las 
+          medidas finales podrán ser las que surjan de la medición en la obra y de acuerdo a lo ya pactado establecido por la autoridad competente.
+        </p>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-right">
+        <p class="text-xs text-gray-400">
+          © 2026 KDS. Todos los derechos reservados
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Additional custom styles if needed */
+  footer {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+</style>

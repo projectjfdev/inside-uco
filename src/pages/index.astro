@@ -1,18 +1,102 @@
 ---
-import HeroSlider from "../components/HeroSlider/HeroSlider";
-import Layout from "../layouts/Layout.astro";
+
 import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer/Footer.astro";
+import Logos from "../components/Logos/Logos.astro";
+import ContactForm from "../components/Contact/ContactForm.tsx";
+import HeroSlider from "../components/HeroSlider/HeroSlider";
+import BannerTextSlider from "../components/BannerTextSlider/BannerTextSlider";
+import WineRouteMap from "../components/WineRouteMap/WineRouteMap.astro";
+import BannerCabana from "../components/BannerCabaña/BannerCabaña.astro";
+import BannerWineFroz from "../components/BannerWineFroz/BannerWineFroz.astro";
+import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro";
 
-// console.log("hola") asdasasdasd
-
-// Welcome s to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Inside Uco">
-  <HeroSlider />
+  <HeroSlider client:load />
+  <BannerWineFroz />
 
-  <p>Pagina principal</p>
+  <BannerHeroImage
+    src="https://res.cloudinary.com/dvrc38ei4/image/upload/v1748388287/img3_soo5xk.png"
+  />
+  <div class="shrink-0 bg-[#D7D5CC] h-[3px] w-full"></div>
 
+  <BannerHeroImage
+    src="https://res.cloudinary.com/dvrc38ei4/image/upload/v1748388793/img4_kpoepa.png"
+  />
 
+  <BannerTextSlider
+    title="Bed & Wine"
+    subtitle="Suites"
+    features={[
+      "22 suites",
+      "Diseño integrado al paisaje",
+      "Piscina",
+      "Habitación + office",
+      "Galería con pérgola",
+      "Zonas de fuegos para compartir",
+    ]}
+    images={[
+      "https://picsum.photos/seed/head/1200/1000",
+      "https://picsum.photos/seed/body/1200/1000",
+      "https://picsum.photos/seed/mind/1200/1000",
+      "https://picsum.photos/seed/leg/1200/1000",
+    ]}
+    client:load
+  />
+
+  <BannerHeroImage
+    src="https://res.cloudinary.com/dvrc38ei4/image/upload/v1748391490/6_h30oeh.png"
+  />
+
+  <BannerTextSlider
+    title="Casas"
+    subtitle="Wine Lodge"
+    features={[
+      "1 y 2 dormitorios",
+      "Para usar o alquilar",
+      "Inspiradas en la naturaleza",
+      "Funcionales, confortables y privadas",
+      "Tu casa Plug & Play, 100% equipada",
+    ]}
+    images={[
+      "https://picsum.photos/seed/soul/1200/1000",
+      "https://picsum.photos/seed/heart/1200/1000",
+      "https://picsum.photos/seed/like/1200/1000",
+      "https://picsum.photos/seed/arms/1200/1000",
+    ]}
+    client:load
+  />
+
+    <BannerHeroImage
+    src="https://res.cloudinary.com/dvrc38ei4/image/upload/v1748391719/7_tumflw.png"
+  />
+
+    <BannerTextSlider
+    title="Fincas"
+    subtitle="Con viñedo"
+    features={[
+      "Viñedos propios de 7.000 m2 totales con área cultivada",
+      "De amante del vino a dueño de un petit vineyard",
+      "Inspiradas en la naturaleza",
+      "Producción administrada por excpertos segun tu plan",
+      "Vistas perfectas a la Cordillera de los Andes",
+    ]}
+    images={[
+      "https://picsum.photos/seed/squeeze/1200/1000",
+      "https://picsum.photos/seed/football/1200/1000",
+      "https://picsum.photos/seed/balloon/1200/1000",
+      "https://picsum.photos/seed/clown/1200/1000",
+    ]}
+    client:load
+  />
+
+  <BannerCabana />
+  <WineRouteMap />
+  <BannerHeroImage src="/public/banner-pileta-montañas.png" />
+  <Logos />
+  <ContactForm client:load />
+  <Footer />
 </Layout>
