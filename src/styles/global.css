@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+
+/* Smooth scrolling para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset para compensar el navbar fijo */
+.scroll-offset {
+  scroll-margin-top: 4rem;
+}
+
+/* Mejoras adicionales para el scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Para usuarios que prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

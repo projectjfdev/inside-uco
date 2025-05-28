@@ -1,5 +1,4 @@
 ---
-
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer/Footer.astro";
@@ -11,7 +10,6 @@ import WineRouteMap from "../components/WineRouteMap/WineRouteMap.astro";
 import BannerCabana from "../components/BannerCabaña/BannerCabaña.astro";
 import BannerWineFroz from "../components/BannerWineFroz/BannerWineFroz.astro";
 import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro";
-
 ---
 
 <Layout title="Inside Uco">
@@ -28,6 +26,7 @@ import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro
   />
 
   <BannerTextSlider
+    id="bed-wine"
     title="Bed & Wine"
     subtitle="Suites"
     features={[
@@ -52,6 +51,7 @@ import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro
   />
 
   <BannerTextSlider
+    id="casas"
     title="Casas"
     subtitle="Wine Lodge"
     features={[
@@ -70,11 +70,12 @@ import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro
     client:load
   />
 
-    <BannerHeroImage
+  <BannerHeroImage
     src="https://res.cloudinary.com/dvrc38ei4/image/upload/v1748391719/7_tumflw.png"
   />
 
-    <BannerTextSlider
+  <BannerTextSlider
+    id="fincas"
     title="Fincas"
     subtitle="Con viñedo"
     features={[

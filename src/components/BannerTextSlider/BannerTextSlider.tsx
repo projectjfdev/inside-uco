@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Props {
+  id: string;
   title: string;
   subtitle: string;
   features: string[];
@@ -12,6 +13,7 @@ interface Props {
 
 
 export default function BannerTextSlider({
+  id,
   title,
   subtitle,
   features,
@@ -32,7 +34,7 @@ export default function BannerTextSlider({
   };
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
+    <div id={id} className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Content Section */}
       <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center p-8 lg:p-16">
         <div className="max-w-md space-y-8">
