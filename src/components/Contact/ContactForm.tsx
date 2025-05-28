@@ -89,12 +89,12 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-[#f2f5f6] py-16 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#d8d4ca] py-28 ">
+      <div className="md: w-[80vw] mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-4xl font-light text-gray-900 mb-2">Contacto</h2>
-          <p className="text-gray-600 text-lg">
+          <h2 className="text-4xl font-semibold mb-2">Contacto</h2>
+          <p className="text-2xl">
             Completá el formulario para solicitar una entrevista exclusiva
           </p>
         </div>
@@ -114,15 +114,15 @@ export default function ContactForm() {
         )}
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <form onSubmit={handleSubmit} className="space-y-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Left Column */}
-            <div className="space-y-6">
+            <div className="space-y-6 md:col-span-3">
               {/* Nombre */}
               <div>
                 <label
                   htmlFor="nombre"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Nombre
                 </label>
@@ -134,7 +134,7 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border border-gray-400 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
 
@@ -142,7 +142,7 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Email
                 </label>
@@ -154,18 +154,18 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border border-gray-400 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
             </div>
 
             {/* Middle Column */}
-            <div className="space-y-6">
+            <div className="space-y-6 md:col-span-3">
               {/* Apellido */}
               <div>
                 <label
                   htmlFor="apellido"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Apellido
                 </label>
@@ -177,7 +177,7 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border border-gray-400 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
 
@@ -185,7 +185,7 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="telefono"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Número de teléfono
                 </label>
@@ -197,67 +197,63 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border border-gray-400 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
             </div>
 
             {/* Right Column */}
-            <div className="md:row-span-2">
+            <div className="md:row-span-2 md:pl-6 md:col-span-6">
               {/* Mensaje */}
               <div>
                 <label
                   htmlFor="mensaje"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium mb-2"
                 >
                   Mensaje
                 </label>
                 <textarea
                   id="mensaje"
                   name="mensaje"
-                  rows={6}
+                  rows={2}
                   value={formData.mensaje}
                   onChange={handleInputChange}
                   placeholder="Escriba su mensaje aquí..."
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border border-gray-400 bg-white text-gray-900 placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent h-32 md:h-full disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 resize-y focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent h-32 md:h-full disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
+              <button
+                type="submit"
+                disabled={status.loading}
+                className="bg-black mt-6 text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
+              >
+                {status.loading && (
+                  <svg
+                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                )}
+                <span>{status.loading ? "Enviando..." : "Enviar"}</span>
+              </button>
             </div>
-          </div>
-
-          {/* Submit Button */}
-          <div className="flex justify-end mt-6">
-            <button
-              type="submit"
-              disabled={status.loading}
-              className="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center space-x-2"
-            >
-              {status.loading && (
-                <svg
-                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-              )}
-              <span>{status.loading ? "Enviando..." : "Enviar"}</span>
-            </button>
           </div>
         </form>
       </div>
