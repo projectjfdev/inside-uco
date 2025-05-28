@@ -89,7 +89,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-[#d8d4ca] py-28 ">
+    <section id="contacto" className="bg-[#d8d4ca] py-28 ">
       <div className="md: w-[80vw] mx-auto">
         {/* Header */}
         <div className="mb-8">

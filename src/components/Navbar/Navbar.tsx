@@ -1,14 +1,27 @@
-import { useState } from "react";
+import { useCallback } from "react";
+import MobileNav from "./MobileNav";
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const scrollToSection = useCallback((sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    scrollToSection(sectionId);
   };
-  // dev
+
   return (
-    <nav className="bg-[#282627] text-white">
+    <nav className="bg-[#282627] text-white md:py-3">
       <div className="mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -16,7 +29,9 @@ export default function Navbar() {
             <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
               <div className="w-2 h-2 bg-white rounded-full"></div>
             </div>
-            <span className="text-xl font-light tracking-wide">INSIDE UCO</span>
+            <span className="text-4xl">
+              <span className="font-[100]">INSIDE</span> UCO
+            </span>
           </div>
 
           {/* Contact Button */}
@@ -25,109 +40,53 @@ export default function Navbar() {
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
                 <a
-                  href="#"
+                  href="#proyecto"
+                  onClick={(e) => handleNavClick(e, "proyecto")}
                   className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
                 >
                   Proyecto
                 </a>
                 <a
-                  href="#"
+                  href="#bed-wine"
+                  onClick={(e) => handleNavClick(e, "bed-wine")}
                   className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
                 >
                   Bed & Wine
                 </a>
                 <a
-                  href="#"
+                  href="#casas"
+                  onClick={(e) => handleNavClick(e, "casas")}
                   className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
                 >
                   Casas
                 </a>
                 <a
-                  href="#"
+                  href="#fincas"
+                  onClick={(e) => handleNavClick(e, "fincas")}
                   className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
                 >
                   Fincas
                 </a>
                 <a
-                  href="#"
+                  href="#gualtallary"
+                  onClick={(e) => handleNavClick(e, "gualtallary")}
                   className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
                 >
-                  Guatallary
+                  Gualtallary
                 </a>
               </div>
             </div>
             <a
-              href="#"
-              className="bg-white text-gray-900 px-6 py-2 font-light hover:bg-gray-100 transition-colors duration-200"
+              href="#contacto"
+              onClick={(e) => handleNavClick(e, "contacto")}
+              className="bg-white text-gray-900 px-6 py-2 font-light hover:bg-gray-200 transition-colors duration-200"
             >
               Contacto
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              type="button"
-              onClick={toggleMobileMenu}
-              className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800">
-          <a
-            href="#"
-            className="block px-3 py-2 text-white hover:text-gray-300 transition-colors duration-200 font-light"
-          >
-            Proyecto
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 text-white hover:text-gray-300 transition-colors duration-200 font-light"
-          >
-            Bed & Wine
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 text-white hover:text-gray-300 transition-colors duration-200 font-light"
-          >
-            Casas
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 text-white hover:text-gray-300 transition-colors duration-200 font-light"
-          >
-            Fincas
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 text-white hover:text-gray-300 transition-colors duration-200 font-light"
-          >
-            Guatallary
-          </a>
-          <a
-            href="#"
-            className="block mx-3 my-2 bg-white text-gray-900 px-6 py-2 text-center font-light hover:bg-gray-100 transition-colors duration-200"
-          >
-            Contacto
-          </a>
+          <MobileNav />
         </div>
       </div>
     </nav>

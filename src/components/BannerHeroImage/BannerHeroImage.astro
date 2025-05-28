@@ -1,10 +1,11 @@
 ---
-// Banner Montañas
+// Banner Montañas 
+const {src} = Astro.props
 ---
 
 <section class="h-[90vh]">
   <img
-    src="/public/banner-pileta-montañas.png"
+    src={src}
     alt="montañas y una piscina"
     class="w-full h-full object-cover"
   />

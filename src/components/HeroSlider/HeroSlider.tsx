@@ -1,12 +1,9 @@
-
-
 import { useState, useEffect } from "react";
 
 interface HeroImage {
-    src: string;
-    alt: string;
+  src: string;
+  alt: string;
 }
-
 
 const heroImages: HeroImage[] = [
   {
@@ -71,89 +68,22 @@ export default function HeroSlider() {
             </div>
           </div>
 
-          {/* Título principal */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-[0.2em] mb-4 sm:mb-6">
-            INSIDE UCO
-          </h1>
-
-          {/* Línea decorativa */}
-          <div className="flex items-center justify-center mb-4 sm:mb-6">
-            <div className="h-px bg-white/60 w-16 sm:w-24" />
-            <div className="mx-4 sm:mx-6 h-2 w-2 rounded-full bg-white/60" />
-            <div className="h-px bg-white/60 w-16 sm:w-24" />
+     
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-[0.2em] mb-4 sm:mb-6">
+              INSIDE UCO
+            </h1>
+            <div className="flex items-center justify-center mb-4 sm:mb-6">
+              <div className="h-[3px] bg-white/60 w-16 sm:w-24 " />
+              {/* <div className="mx-4 sm:mx-6 h-2 w-2 rounded-full bg-white/60" /> */}
+                    <span className="text-lg sm:text-xl md:text-2xl font-light tracking-[0.3em] text-white/90 mx-16">VALLE DE UCO</span>
+              <div className="h-[3px] bg-white/60 w-16 sm:w-24" />
+            </div>
           </div>
 
-          {/* Subtítulo */}
-          <p className="text-lg sm:text-xl md:text-2xl font-light tracking-[0.3em] text-white/90">
-            VALLE DE UCO
-          </p>
+       
         </div>
       </div>
-
-      {/* Indicadores del slider */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex space-x-3">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImage(index)}
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                index === currentImage
-                  ? "bg-white scale-125"
-                  : "bg-white/50 hover:bg-white/75"
-              }`}
-              aria-label={`Ir a imagen ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div> */}
-
-      {/* Botones de navegación opcionales */}
-      {/* <button
-        onClick={() =>
-          setCurrentImage(
-            (prev) => (prev - 1 + heroImages.length) % heroImages.length
-          )
-        }
-        className="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 z-20 text-white/70 hover:text-white transition-colors duration-300"
-        aria-label="Imagen anterior"
-      >
-        <svg
-          className="h-8 w-8 sm:h-10 sm:w-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button> */}
-
-      {/* <button
-        onClick={() =>
-          setCurrentImage((prev) => (prev + 1) % heroImages.length)
-        }
-        className="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 z-20 text-white/70 hover:text-white transition-colors duration-300"
-        aria-label="Imagen siguiente"
-      >
-        <svg
-          className="h-8 w-8 sm:h-10 sm:w-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button> */}
     </section>
   );
 }
