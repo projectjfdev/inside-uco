@@ -26,11 +26,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
-            </div>
             <span className="text-4xl">
-              <span className="font-[100]">INSIDE</span> UCO
+              {/* <span className="font-[100]">INSIDE</span> UCO */}
+              <img src="./logo-white.png" alt="" className="w-[150px]" />
             </span>
           </div>
 
@@ -42,35 +40,40 @@ export default function Navbar() {
                 <a
                   href="#proyecto"
                   onClick={(e) => handleNavClick(e, "proyecto")}
-                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
                   Proyecto
                 </a>
                 <a
                   href="#bed-wine"
                   onClick={(e) => handleNavClick(e, "bed-wine")}
-                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
                   Bed & Wine
                 </a>
                 <a
                   href="#casas"
                   onClick={(e) => handleNavClick(e, "casas")}
-                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
                   Casas
                 </a>
                 <a
                   href="#fincas"
                   onClick={(e) => handleNavClick(e, "fincas")}
-                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
                   Fincas
                 </a>
                 <a
                   href="#gualtallary"
                   onClick={(e) => handleNavClick(e, "gualtallary")}
-                  className="text-white hover:text-gray-300 transition-colors duration-200 font-light"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
                   Gualtallary
                 </a>
@@ -79,7 +82,8 @@ export default function Navbar() {
             <a
               href="#contacto"
               onClick={(e) => handleNavClick(e, "contacto")}
-              className="bg-white text-gray-900 px-6 py-2 font-light hover:bg-gray-200 transition-colors duration-200"
+              style={{ fontFamily: "NolanNextRegular" }}
+              className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
             >
               Contacto
             </a>

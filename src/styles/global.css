@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 
+:root {
+  --font-sharp: 'SharpSansDispNo2Light';
+  --font-nolan: 'NolanNextBold';
+  --font-poppins: 'Poppins', sans-serif;
+  --font-custom: 'Euclid Circular A', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-galaxy: 'DistantGalaxy';
+}
+
+
 /* Smooth scrolling para toda la página */
 html {
   scroll-behavior: smooth;
@@ -23,4 +32,68 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+
+
+/* Tipografias */
+
+@font-face {
+  font-family: 'NolanNextBold';
+  src: url('/fonts/NolanNextBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NolanNextBold2';
+  src: url('/fonts/NolanNextBold2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NolanNextMedium';
+  src: url('/fonts/NolanNextMedium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NolanNextRegular';
+  src: url('/fonts/NolanNextRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SharpSansDispNo2Book';
+  src: url('/fonts/SharpSansDispNo2-Book.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SharpSansDispNo2Light';
+  src: url('/fonts/SharpSansDispNo2-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SharpSansDispNo2Medium';
+  src: url('/fonts/SharpSansDispNo2-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DistantGalaxy';
+  src: url('/fonts/galaxy.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
