@@ -110,7 +110,7 @@ export default function MobileNav() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-              className="flex flex-col items-center justify-center h-full px-8 pt-20"
+              className="flex flex-col items-center justify-center h-full px-8 pt-24"
             >
               <nav className="w-full max-w-md">
                 <ul className="space-y-2">
