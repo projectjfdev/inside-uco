@@ -110,7 +110,7 @@ export default function MobileNav() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-              className="flex flex-col items-center justify-center h-full px-8"
+              className="flex flex-col items-center justify-center h-full px-8 pt-5"
             >
               <nav className="w-full max-w-md">
                 <ul className="space-y-2">
@@ -131,7 +131,6 @@ export default function MobileNav() {
                         onClick={() => setIsOpen(false)}
                         className="block w-full text-white text-3xl md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
                         style={{
-                          minHeight: "44px",
                           fontFamily: "NolanNextRegular",
                           fontWeight: "200",
                         }}
