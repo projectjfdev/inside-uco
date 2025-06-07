@@ -1,8 +1,7 @@
-"use client";
-
 import type React from "react";
 
 import { useState } from "react";
+import { Toaster, toast } from "sonner";
 
 interface FormData {
   nombre: string;
@@ -52,15 +51,16 @@ export default function ContactForm() {
       const emailjs = await import("@emailjs/browser");
 
       // Configurar EmailJS (reemplaza con tus credenciales)
-      const SERVICE_ID = "your_service_id";
-      const TEMPLATE_ID = "your_template_id";
-      const PUBLIC_KEY = "your_public_key";
+      const SERVICE_ID = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
 
       // Preparar los datos para EmailJS
       const templateParams = {
-        from_name: `${formData.nombre} ${formData.apellido}`,
-        from_email: formData.email,
+        name: `${formData.nombre} `,
+        lastname: `${formData.apellido}`,
         phone: formData.telefono,
+        email: formData.email,
         message: formData.mensaje,
         to_name: "Inside UCO", // Nombre del destinatario
       };
@@ -78,12 +78,35 @@ export default function ContactForm() {
         telefono: "",
         mensaje: "",
       });
+
+      toast.success("Mensaje enviado con éxito", {
+        description:
+          "Gracias por contactarnos. Nos pondremos en contacto a la brevedad. ",
+        duration: 10000,
+        action: {
+          label: "X",
+          onClick: () => {
+            window.close();
+          },
+        },
+      });
     } catch (error) {
       console.error("Error sending email:", error);
       setStatus({
         loading: false,
         success: false,
         error: "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+      });
+       toast.error("Error al enviar su consulta", {
+        description:
+          "Hubo un problema al enviar su consulta ",
+        duration: 10000,
+        action: {
+          label: "X",
+          onClick: () => {
+            window.close();
+          },
+        },
       });
     }
   };
@@ -93,25 +116,30 @@ export default function ContactForm() {
       <div className="md: w-[80vw] mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-4xl font-semibold mb-2">Contacto</h2>
-          <p className="text-2xl">
+          <h2
+            style={{ fontFamily: "NolanNextBold" }}
+            className="text-[40px] font-bold mb-2"
+          >
+            Contacto
+          </h2>
+          <p style={{ fontFamily: "NolanNextRegular" }} className="text-[25px]">
             Completá el formulario para solicitar una entrevista exclusiva
           </p>
         </div>
 
-        {/* Success Message */}
-        {status.success && (
+   
+        {/* {status.success && (
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
             ¡Mensaje enviado exitosamente! Te contactaremos pronto.
           </div>
         )}
 
-        {/* Error Message */}
+   
         {status.error && (
           <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
             {status.error}
           </div>
-        )}
+        )} */}
 
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-6 ">
@@ -122,7 +150,8 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="nombre"
-                  className="block text-sm font-medium mb-2"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="block text-base font-medium mb-2"
                 >
                   Nombre
                 </label>
@@ -134,7 +163,8 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="w-full px-3 py-3 border border-black bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-[1.5px] focus:ring-gray-900 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
 
@@ -142,7 +172,8 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="block text-base font-medium mb-2"
                 >
                   Email
                 </label>
@@ -154,7 +185,8 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="w-full border border-black  px-3 py-3  bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-[1.5px] focus:ring-gray-900 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
             </div>
@@ -165,7 +197,8 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="apellido"
-                  className="block text-sm font-medium mb-2"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="block text-base font-medium mb-2"
                 >
                   Apellido
                 </label>
@@ -177,7 +210,8 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="w-full border-black  px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-[1.5px] focus:ring-gray-900 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
 
@@ -185,7 +219,8 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="telefono"
-                  className="block text-sm font-medium mb-2"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="block text-base font-medium mb-2"
                 >
                   Número de teléfono
                 </label>
@@ -197,7 +232,8 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="w-full border-black  px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-[1.5px] focus:ring-gray-900 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
             </div>
@@ -208,7 +244,8 @@ export default function ContactForm() {
               <div>
                 <label
                   htmlFor="mensaje"
-                  className="block text-sm font-medium mb-2"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="block text-base font-medium mb-2"
                 >
                   Mensaje
                 </label>
@@ -221,13 +258,14 @@ export default function ContactForm() {
                   placeholder="Escriba su mensaje aquí..."
                   required
                   disabled={status.loading}
-                  className="w-full px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 resize-y focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent h-32 md:h-full disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="w-full border-black  px-3 py-3 border bg-[#d8d4ca] text-gray-900 placeholder-gray-500 resize-y focus:outline-none focus:ring-[1.5px] focus:ring-gray-900 focus:border-transparent h-32 md:h-full disabled:bg-gray-100 disabled:cursor-not-allowed"
                 />
               </div>
               <button
                 type="submit"
                 disabled={status.loading}
-                className="bg-black mt-6 text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="bg-black mt-6 flex cursor-pointer text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-[1.5px] focus:ring-gray-900 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
                 {status.loading && (
                   <svg
@@ -251,12 +289,18 @@ export default function ContactForm() {
                     ></path>
                   </svg>
                 )}
-                <span>{status.loading ? "Enviando..." : "Enviar"}</span>
+                <span
+                  className="text-base font-normal w-full"
+                  style={{ fontFamily: "NolanNextRegular" }}
+                >
+                  {status.loading ? "Enviando..." : "Enviar"}
+                </span>
               </button>
             </div>
           </div>
         </form>
       </div>
+      <Toaster />
     </section>
   );
 }

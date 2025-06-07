@@ -55,12 +55,7 @@ export default function MobileNav() {
       <header className=" fixed top-0 left-0 right-0 z-50 bg-[#282627] backdrop-blur-md ">
         <div className="flex items-center justify-between px-6 py-4">
           <div className="flex gap-3 items-center">
-            <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
-            </div>
-            <span className="text-2xl font-light tracking-wide">
-              INSIDE UCO
-            </span>
+            <img src="./logo-nav.png" alt="" className="w-[175px]" />
           </div>
 
           {/* Hamburger Button */}
@@ -135,7 +130,11 @@ export default function MobileNav() {
                         href={item.href}
                         onClick={() => setIsOpen(false)}
                         className="block w-full text-white text-3xl md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
-                        style={{ minHeight: "44px" }}
+                        style={{
+                          minHeight: "44px",
+                          fontFamily: "NolanNextRegular",
+                          fontWeight: "200",
+                        }}
                       >
                         {item.label}
                       </a>
@@ -152,15 +151,22 @@ export default function MobileNav() {
                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.5 }}
                 className="mt-16 text-center"
               >
-                <p className="text-white/60 text-sm mb-4 tracking-wide">
+                <p
+                  style={{ fontFamily: "NolanNextRegular" }}
+                  className="text-white/60 text-sm mb-4 tracking-wide"
+                >
                   Contáctanos
                 </p>
                 <div className="space-y-2">
-                  <p className="text-white/80 text-lg font-light">
+                  <p
+                    style={{ fontFamily: "NolanNextRegular" }}
+                    className="text-white/80 text-lg font-light"
+                  >
                     +1 (555) 123-4567
                   </p>
                   <p className="text-white/80 text-lg font-light">
                     <a
+                      style={{ fontFamily: "NolanNextRegular" }}
                       href="mailto:info@insideuco.com.ar"
                       className="hover:text-gray-400"
                     >
@@ -180,6 +186,7 @@ export default function MobileNav() {
               >
                 {["Instagram", "Facebook", "LinkedIn"].map((social, index) => (
                   <motion.a
+                  style={{ fontFamily: "NolanNextRegular" }}
                     key={social}
                     href={
                       social === "Facebook"

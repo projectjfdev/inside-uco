@@ -2,29 +2,87 @@
 // WineRouteMap.astro - Wine Route location map component
 ---
 
-<!-- <section id="gualtallary" class="bg-[#d9d7ca] py-16 px-6"> -->
- <section  class="relative min-h-screen bg-[#7a8471] text-white overflow-hidden bg-[url('https://res.cloudinary.com/dijfs2fcy/image/upload/v1749243422/mapa_nf4brh.jpg')] bg-cover bg-center bg-no-repeat">
-  <div class="w-[80vw] mx-auto">
-    <div class="">
+<!-- <section id="gualtallary" class="bg-[#d9d7ca] py-16 px-6">     <span class="font-extralight text-gray-600">INSIDE </span>UCO  -->
+<section
+  class="relative h-screen md:min-h-[85%] bg-[#7a8471] text-white flex flex-col justify-center overflow-hidden bg-[url('https://res.cloudinary.com/dijfs2fcy/image/upload/v1749243422/mapa_nf4brh.jpg')] bg-cover bg-center bg-no-repeat"
+>
+  <div class="w-[80vw] mx-auto h-full flex flex-col justify-center">
+    <div class="flex flex-col justify-center h-full">
       <!-- Left side: Text content -->
       <div class="space-y-6">
-        <h2 class="text-4xl lg:text-5xl font-semibold ">
+        <h2 class="text-4xl lg:text-5xl font-semibold">
           En el corazón de la<br />
           Ruta del Vino
         </h2>
-        <div class="max-w-[370px] text-[1.1rem]">
-          <p class="">
-            <span class="font-extralight text-gray-600">INSIDE </span>UCO se encuentra rodeado de las 
+        <div class="max-w-[500px] text-[1.1rem]">
+          <div class="flex gap-3 items-center">
+            <img src="/logo2.png" class="w-[105px] h-fit md:w-[121px] md:h-[17px]" alt="logo2" />
+            <p
+              style={{ fontFamily: "NolanNextRegular" }}
+              class="font-[400] text-xl md:text-[25px] relative top-[0.5px] md:top-0"
+            >
+              se encuentra rodeado de las
+            </p>
+            <p class="hidden">
+              de las bodegas más emblemáticas del Valle de Uco.
+            </p>
+          </div>
+
+          <p
+            style={{ fontFamily: "NolanNextRegular" }}
+            class="font-[400] text-xl md:text-[25px]"
+          >
             bodegas más emblemáticas del Valle de Uco.
           </p>
-          <p class="">
-            A menos de 30' de los nombres que hicieron 
-            de Mendoza una referencia mundial
+
+          <p
+            style={{ fontFamily: "NolanNextRegular" }}
+            class="font-[400] text-xl md:text-[25px]"
+          >
+            A menos de 30' de los nombres que hicieron de Mendoza una referencia
+            mundial
           </p>
         </div>
-      </div>
 
-      
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <img src="/5min.png" alt="5min" />
+            <p
+              style={{ fontFamily: "NolanNextRegular" }}
+              class="font-[400] text-xl md:text-[25px]"
+            >
+              Centro de Tupungato
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="/30min.png" alt="5min" />
+            <p
+              style={{ fontFamily: "NolanNextRegular" }}
+              class="font-[400] text-xl md:text-[25px]"
+            >
+              Tunuyán
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="/min60.png" alt="5min" />
+            <p
+              style={{ fontFamily: "NolanNextRegular" }}
+              class="font-[400] text-xl md:text-[25px]"
+            >
+              Ciudad de Mendoza
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="/min80.png" alt="5min" />
+            <p
+              style={{ fontFamily: "NolanNextRegular" }}
+              class="font-[400] text-xl md:text-[25px]"
+            >
+              Aeropuerto
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -32,15 +90,18 @@
 <style>
   /* Ensure text in SVG renders properly */
   svg text {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
-  
+
   /* Responsive adjustments */
   @media (max-width: 1024px) {
     svg text {
       font-size: 12px;
     }
-    
+
     svg .text-xs {
       font-size: 10px;
     }

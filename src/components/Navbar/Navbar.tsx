@@ -28,7 +28,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-3">
             <span className="text-4xl">
               {/* <span className="font-[100]">INSIDE</span> UCO */}
-              <img src="./logo-white.png" alt="" className="w-[150px]" />
+              <img src="./logo-nav.png" alt="" className="md:w-[205px]" />
             </span>
           </div>
 

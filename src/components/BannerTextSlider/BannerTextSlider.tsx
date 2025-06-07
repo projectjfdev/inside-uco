@@ -35,13 +35,13 @@ export default function BannerTextSlider({
   return (
     <div id={id} className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Content Section */}
-      <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center p-8 lg:p-16">
+      <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center py-28 px-8 lg:p-16 ">
         <div className="max-w-md space-y-8">
           <div className="space-y-2">
-            <h1 className="text-4xl lg:text-[2.7rem]  text-gray-900 font-bold">
+            <h1 style={{ fontFamily: "NolanNextBold2" }} className="text-4xl  text-black font-bold lg:text-[40px] ">
               {title}
             </h1>
-            <h2 className="text-4xl lg:text-[2.7rem]  font-normal text-gray-900">
+            <h2 style={{ fontFamily: "NolanNextRegular" }} className="text-4xl  text-black  lg:text-[40px] ">
               {subtitle}
             </h2>
           </div>
@@ -50,19 +50,19 @@ export default function BannerTextSlider({
             {features.map((feature, index) => (
               <li className="flex items-center" key={features[index]}>
                 <span className="mr-3 mt-2 w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0"></span>
-                <span className="text-2xl font-[400]">{feature}</span>
+                <span style={{ fontFamily: "NolanNextRegular" }}  className="text-[25px] font-[400] text-black leading-tight">{feature}</span>
               </li>
             ))}
           </ul>
 
-          <button className="rounded-full px-8 py-3 text-[1.5rem] border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors border cursor-pointer">
+          <button style={{ fontFamily: "NolanNextRegular" }} className=" font-[400] px-8 py-3 text-[25px] border-gray-800 text-black hover:bg-gray-800 hover:text-white transition-colors border cursor-pointer">
             Quiero más información
           </button>
         </div>
       </div>
 
       {/* Right Image Slider Section */}
-      <div className="lg:w-1/2 relative h-[50vh] lg:h-screen">
+      <div className="lg:w-1/2 relative h-[100vh] lg:h-screen">
         <div className="relative w-full h-full overflow-hidden flex flex-col items-end justify-end">
           <img
             src={images[currentImage] || "/placeholder.svg"}

@@ -67,10 +67,8 @@ export default function HeroSlider() {
         <div className="text-center text-white px-4 sm:px-6 lg:px-8">
 
           <div>
-            {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-[0.2em] mb-4 sm:mb-6">
-              INSIDE UCO
-            </h1> */}
-           <img src="./logo-white.png" alt="" />
+      
+           <img src="./logo-white.png" className="md:w-[557px]" alt="" />
           </div>
         </div>
       </div>
