@@ -16,6 +16,12 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+      <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content="Inside Uco se encuentra rodeado de las bodegas más emblemáticas del Valle de Uco. A menos de 30' de los nombres que hicieron de Mendoza una referencia mundial " />
+  <meta property="og:image" content="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749319023/LOGO_Inside-Uco_cpigxk.jpg" />
+  <meta property="og:url" content="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749319023/LOGO_Inside-Uco_cpigxk.jpg" />
+  <meta property="og:type" content="website" />
     <title>{title}</title>
   </head>
   <body>
