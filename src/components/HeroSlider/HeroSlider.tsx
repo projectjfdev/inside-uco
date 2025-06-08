@@ -7,23 +7,23 @@ interface HeroImage {
 
 const heroImages: HeroImage[] = [
   {
-    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749183741/hero1_yvtxsy.jpg",
+    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749390526/hero1_yvtxsy_h9sfdm.jpg",
     alt: "Valle de Uco - Montañas al atardecer",
   },
   {
-    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749183740/hero2_vexvl5.jpg",
+    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749390526/hero2_vexvl5_o6e3sx.jpg",
     alt: "Valle de Uco - Viñedos y montañas",
   },
   {
-    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749183739/hero3_ibzr1v.jpg",
+    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749390526/hero3_ibzr1v_solitu.jpg",
     alt: "Valle de Uco - Paisaje andino",
   },
   {
-    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749183739/hero5_dkvtye.jpg",
+    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749390781/her4_wt0r3x.jpg",
     alt: "Valle de Uco - Cielo dramático",
   },
    {
-    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749183739/hero5_dkvtye.jpg",
+    src: "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749390526/hero5_dkvtye_a1xzc5.jpg",
     alt: "Valle de Uco - Cielo dramático",
   },
 ];
