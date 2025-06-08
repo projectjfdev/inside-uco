@@ -139,6 +139,22 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'NolanNextLight';
+  src: url('/fonts/NolanNextLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NolanNextBook';
+  src: url('/fonts/NolanNextBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
