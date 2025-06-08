@@ -38,10 +38,10 @@ export default function BannerTextSlider({
       <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center py-28 px-8 lg:p-16 ">
         <div className="max-w-md space-y-8">
           <div className="space-y-2">
-            <h1 style={{ fontFamily: "NolanNextBold2" }} className="text-4xl  text-black font-bold lg:text-[40px] ">
+            <h1 style={{ fontFamily: "NolanNextBold2" }} className="text-3xl md:text-4xl  text-black font-bold lg:text-[40px] ">
               {title}
             </h1>
-            <h2 style={{ fontFamily: "NolanNextRegular" }} className="text-4xl  text-black  lg:text-[40px] ">
+            <h2 style={{ fontFamily: "NolanNextRegular" }} className="text-3xl md:text-4xl  text-black  lg:text-[40px] ">
               {subtitle}
             </h2>
           </div>
@@ -49,13 +49,13 @@ export default function BannerTextSlider({
           <ul className="space-y-3 text-gray-800">
             {features.map((feature, index) => (
               <li className="flex items-center" key={features[index]}>
-                <span className="mr-3 mt-2 w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0"></span>
-                <span style={{ fontFamily: "NolanNextRegular" }}  className="text-[25px] font-[400] text-black leading-tight">{feature}</span>
+                <span className="mr-3 md:mt-2 w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0"></span>
+                <span style={{ fontFamily: "NolanNextRegular" }}  className="text-xl md:text-[25px] font-[400] text-black leading-tight">{feature}</span>
               </li>
             ))}
           </ul>
 
-          <button style={{ fontFamily: "NolanNextRegular" }} className=" font-[400] px-8 py-3 text-[25px] border-gray-800 text-black hover:bg-gray-800 hover:text-white transition-colors border cursor-pointer">
+          <button style={{ fontFamily: "NolanNextRegular" }} className=" font-[400] px-8 py-3 text-xl md:text-[25px] border-gray-800 text-black hover:bg-gray-800 hover:text-white transition-colors border cursor-pointer">
             Quiero más información
           </button>
         </div>

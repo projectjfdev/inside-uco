@@ -118,11 +118,11 @@ export default function ContactForm() {
         <div className="mb-8">
           <h2
             style={{ fontFamily: "NolanNextBold" }}
-            className="text-[40px] font-bold mb-2"
+            className="text-4xl md:text-[40px] font-bold mb-2"
           >
             Contacto
           </h2>
-          <p style={{ fontFamily: "NolanNextRegular" }} className="text-[25px]">
+          <p style={{ fontFamily: "NolanNextRegular" }} className="text-xl md:text-[25px]">
             Completá el formulario para solicitar una entrevista exclusiva
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function ContactForm() {
                 <label
                   htmlFor="nombre"
                   style={{ fontFamily: "NolanNextRegular" }}
-                  className="block text-base font-medium mb-2"
+                  className="block text-sm md:text-base font-medium mb-2"
                 >
                   Nombre
                 </label>
@@ -173,7 +173,7 @@ export default function ContactForm() {
                 <label
                   htmlFor="email"
                   style={{ fontFamily: "NolanNextRegular" }}
-                  className="block text-base font-medium mb-2"
+                  className="block text-sm md:text-base font-medium mb-2"
                 >
                   Email
                 </label>
@@ -198,7 +198,7 @@ export default function ContactForm() {
                 <label
                   htmlFor="apellido"
                   style={{ fontFamily: "NolanNextRegular" }}
-                  className="block text-base font-medium mb-2"
+                  className="block text-sm md:text-base font-medium mb-2"
                 >
                   Apellido
                 </label>
@@ -220,7 +220,7 @@ export default function ContactForm() {
                 <label
                   htmlFor="telefono"
                   style={{ fontFamily: "NolanNextRegular" }}
-                  className="block text-base font-medium mb-2"
+                  className="block text-sm md:text-base font-medium mb-2"
                 >
                   Número de teléfono
                 </label>
@@ -245,7 +245,7 @@ export default function ContactForm() {
                 <label
                   htmlFor="mensaje"
                   style={{ fontFamily: "NolanNextRegular" }}
-                  className="block text-base font-medium mb-2"
+                  className="block text-sm md:text-base font-medium mb-2"
                 >
                   Mensaje
                 </label>
