@@ -128,7 +128,7 @@ export default function MobileNav() {
                       <a
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block w-full text-white text-3xl md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
+                        className="block w-full text-white text-[26px] md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
                         style={{
                           fontFamily: "NolanNextRegular",
                           fontWeight: "200",
@@ -163,7 +163,7 @@ export default function MobileNav() {
                           }
                         }, 300);
                       }}
-                      className="block w-full text-white text-3xl md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
+                      className="block w-full text-white text-[26px] md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
                       style={{
                         fontFamily: "NolanNextRegular",
                         fontWeight: "200",
@@ -199,9 +199,9 @@ export default function MobileNav() {
                   }}
                   style={{
                     fontFamily: "NolanNextRegular",
-                    fontWeight: "200",
+
                   }}
-                  className="block w-full bg-white text-black text-3xl md:text-4xl font-light tracking-wide py-4 px-6 cursor-pointer transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
+                  className="block w-full bg-white text-black text-[26px] md:text-4xl tracking-wide py-2 px-5 cursor-pointer transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
                 >
                   Contacto
                 </a>

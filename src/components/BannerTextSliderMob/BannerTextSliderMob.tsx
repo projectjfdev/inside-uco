@@ -34,12 +34,15 @@ export default function BannerTextSlider({
   };
 
   return (
-    <div id={id} className="min-h-screen flex flex-col lg:flex-row scroll-mt-20 md:scroll-mt-0 md:hidden">
+    <div
+      id={id}
+      className="min-h-screen flex flex-col lg:flex-row scroll-mt-20 md:scroll-mt-0 md:hidden"
+    >
       {/* Left Content Section  */}
       <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center py-16 px-8 lg:p-16 ">
         <div className="max-w-md space-y-8">
           <div className="space-y-2">
-            <MainTitle title={`${title}`}/>
+            <MainTitle title={`${title}`} />
             <h2
               style={{ fontFamily: "NolanNextRegular" }}
               className="text-[28px] md:text-4xl  text-black  lg:text-[40px] "
@@ -62,12 +65,13 @@ export default function BannerTextSlider({
             ))}
           </ul>
 
-          <button
+          <a
+            href="#contacto"
             style={{ fontFamily: "NolanNextRegular" }}
             className=" font-[400] px-8 py-3 text-xl md:text-[25px] border-gray-800 text-black hover:bg-[#292627] hover:text-white transition-colors border cursor-pointer"
           >
             Quiero más información
-          </button>
+          </a>
         </div>
       </div>
 
@@ -78,13 +82,11 @@ export default function BannerTextSlider({
             src={images[currentImage] || "/placeholder.svg"}
             alt={`Suite image ${currentImage + 1}`}
             className="object-cover w-full h-full"
-        
           />
 
           <div className="">
             {/* Navigation Arrows (moved to bottom) */}
             <div className="absolute bottom-6 left-0 right-0 flex justify-around px-20 xl:px-40 z-10 items-center">
-
               <button
                 onClick={prevImage}
                 className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
