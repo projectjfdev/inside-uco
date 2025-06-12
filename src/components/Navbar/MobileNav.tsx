@@ -38,10 +38,9 @@ export default function MobileNav() {
 
   const menuItems = [
     { label: "Proyecto", href: "#proyecto" },
-    { label: "Bed & Wine ", href: "#bed-wine" },
-    { label: "Casas", href: "#casas" },
-    { label: "Fincas", href: "#fincas" },
-    // { label: "Gualtallary", href: "#gualtallary" },
+    { label: "Bed & Wine", href: "#bed-wine-mob" },
+    { label: "Casas", href: "#casas-mob" },
+    { label: "Fincas", href: "#fincas-mob" },
   ];
 
   const toggleMenu = () => {

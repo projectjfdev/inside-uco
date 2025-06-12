@@ -51,7 +51,7 @@ export default function Navbar() {
                   Proyecto
                 </a>
                 <a
-                  href="#bed-wine"
+                  href="#bed-wine-desk"
                   onClick={(e) => handleNavClick(e, "bed-wine")}
                   style={{ fontFamily: "NolanNextRegular" }}
                   className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
@@ -59,7 +59,7 @@ export default function Navbar() {
                   Bed & Wine
                 </a>
                 <a
-                  href="#casas"
+                  href="#casas-desk"
                   onClick={(e) => handleNavClick(e, "casas")}
                   style={{ fontFamily: "NolanNextRegular" }}
                   className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
@@ -67,7 +67,7 @@ export default function Navbar() {
                   Casas
                 </a>
                 <a
-                  href="#fincas"
+                  href="#fincas-desk"
                   onClick={(e) => handleNavClick(e, "fincas")}
                   style={{ fontFamily: "NolanNextRegular" }}
                   className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
