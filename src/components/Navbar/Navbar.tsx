@@ -52,7 +52,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href="#bed-wine-desk"
-                  onClick={(e) => handleNavClick(e, "bed-wine")}
+                  onClick={(e) => handleNavClick(e, "bed-wine-desk")}
                   style={{ fontFamily: "NolanNextRegular" }}
                   className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
@@ -60,7 +60,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href="#casas-desk"
-                  onClick={(e) => handleNavClick(e, "casas")}
+                  onClick={(e) => handleNavClick(e, "casas-desk")}
                   style={{ fontFamily: "NolanNextRegular" }}
                   className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
@@ -68,7 +68,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href="#fincas-desk"
-                  onClick={(e) => handleNavClick(e, "fincas")}
+                  onClick={(e) => handleNavClick(e, "fincas-desk")}
                   style={{ fontFamily: "NolanNextRegular" }}
                   className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
                 >
