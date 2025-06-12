@@ -21,14 +21,19 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#282627] text-white md:py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#282627] text-white md:py-3">
       <div className="mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex items-center justify-between h-16">
+          <MobileNav />
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <span className="text-4xl">
               {/* <span className="font-[100]">INSIDE</span> UCO */}
-              <img src="./logo-nav.png" alt="" className="md:w-[205px]" />
+              <img
+                src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749688278/logo-navbar-desk_ltji4x.svg"
+                alt=""
+                className="md:w-[205px]"
+              />
             </span>
           </div>
 
@@ -81,16 +86,14 @@ export default function Navbar() {
             </div>
             <a
               href="#contacto"
-              onClick={(e) => handleNavClick(e, "contacto")}
               style={{ fontFamily: "NolanNextRegular" }}
-              className="text-white hover:text-gray-300 transition-colors duration-200 text-base"
+              className="text-black transition-colors duration-200 text-base bg-white py-2 px-5 font-[400] cursor-pointer inline-block "
             >
               Contacto
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <MobileNav />
         </div>
       </div>
     </nav>

@@ -1,29 +1,32 @@
 ---
+import MainTitle from "../MainTitle/Maintitle";
+
 // Banner WineFroz
 ---
 
 <section
   id="proyecto"
-  class="relative min-h-screen bg-[#7a8471] text-white overflow-hidden bg-[url('https://res.cloudinary.com/dijfs2fcy/image/upload/v1749241244/fondo-verde_tihcru.jpg')] bg-cover bg-center bg-no-repeat"
+  class="relative min-h-screen bg-[#7a8471] text-white overflow-hidden bg-[url('https://res.cloudinary.com/dijfs2fcy/image/upload/v1749682567/2-winefroz-mobile_llwtcu.png')] md:bg-[url('https://res.cloudinary.com/dijfs2fcy/image/upload/v1749241244/fondo-verde_tihcru.jpg')] bg-cover bg-center bg-no-repeat"
 >
-  <div class="container mx-auto px-6 lg:px-8 h-screen flex item-center md:items-start">
-    <div class="grid lg:grid-cols-2 gap-0 lg:gap-16 justify-center items-center h-full w-full">
+  <div
+    class="container mx-auto px-6 lg:px-8 h-screen flex item-center md:items-start"
+  >
+    <div
+      class="grid lg:grid-cols-2 gap-0 lg:gap-16 justify-center items-start md:items-center h-full w-full"
+    >
       {/* Content */}
       <div class="space-y-12">
-        <div class="space-y-6 h-full  md:h-1/2 flex flex-col  md:item-start justify-center">
-          <h1
-            style={{ fontFamily: "NolanNextBold" }}
-            class="text-4xl md:text-5xl lg:text-[40px] font-bold leading-tight"
-          >
-            Vivir Mendoza desde adentro
-          </h1>
-
+        <div
+          class="space-y-6 h-full md:h-1/2 flex flex-col md:item-start justify-center"
+        >
+       
+          <MainTitle title="Vivir Mendoza desde adentro" classname="pt-26 md:pt-0"/>
           <div
-            class="text-lg md:text-xl lg:text-2xl font-[200] leading-relaxed space-y-4 "
+            class="text-lg md:text-xl lg:text-2xl font-[200] leading-relaxed space-y-4"
           >
             <p
               style={{ fontFamily: "NolanNextRegular" }}
-              class="font-[400] text-xl md:text-[25px]"
+              class="font-[400] text-[17px] md:text-[25px]"
             >
               En el Valle de Uco, diseñamos{" "}
               <span class="font-bold">Casas <span>y</span> Fincas</span>
@@ -38,19 +41,28 @@
           </div>
         </div>
 
-        {/* Logo */}
+        {/* Logo desk */}
         <div class="pt-8 lg:pt-16">
           <div
             class="text-2xl md:text-3xl lg:text-4xl font-light tracking-[0.2em]"
           >
             <img
-              src="https://res.cloudinary.com/dvrc38ei4/image/upload/v1748387054/logo_ae1qrf.png"
+              src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749688089/winefroz-svg-banner-2_c4gf4d.svg"
               alt=""
-              class="md:w-[292px]"
+              class="hidden md:flex md:w-[292px]"
             />
           </div>
         </div>
       </div>
+      {/* Logo mobile */}
+      <div class="pt-40">
+        <img
+          src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749688089/winefroz-svg-banner-2_c4gf4d.svg"
+          alt=""
+          class="md:hidden w-[203px] md:w-[292px]"
+        />
+      </div>
     </div>
+    
   </div>
 </section>

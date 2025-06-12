@@ -68,7 +68,7 @@ export default function HeroSlider() {
 
           <div>
       
-           <img src="./logo-white.png" className="md:w-[557px]" alt="" />
+           <img src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749688186/Logo-hero_rzcibi.svg" className="w-[283px] md:w-[557px]" alt="" />
           </div>
         </div>
       </div>

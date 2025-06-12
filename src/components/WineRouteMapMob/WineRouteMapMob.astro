@@ -4,15 +4,18 @@
 
 <!-- <section id="gualtallary" class="bg-[#d9d7ca] py-16 px-6">     <span class="font-extralight text-gray-600">INSIDE </span>UCO  -->
 <section
-  class="relative h-screen md:min-h-[85%] bg-[#7a8471] text-white flex flex-col justify-center overflow-hidden bg-[url('https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393952/mapa_bz6gnx.jpg')] bg-cover bg-center bg-no-repeat"
+id="gualtallary"
+  class=" md:hidden relative h-[75%] md:min-h-[85%] bg-[#292627] text-white  flex-col justify-center overflow-hidden  "
 >
-  <div class="w-[80vw] mx-auto h-full flex flex-col justify-center">
+  <div class="w-[80vw] mx-auto h-full flex flex-col justify-center ">
     <div class="flex flex-col justify-center h-full">
       <!-- Left side: Text content -->
-      <div class="space-y-6">
-        <div class="max-w-[500px] text-[1.1rem] flex flex-col gap-10">
-
-          <h2 class="text-4xl lg:text-5xl font-semibold">
+      <div class="space-y-6 flex items-center md:gap-80">
+        <div class="max-w-[500px] text-[1.1rem] flex flex-col gap-8">
+          <h2
+            style={{ fontFamily: "NolanNextBold" }}
+            class="text-[28px] md:text-4xl lg:text-[40px] font-bold leading-tight"
+          >
             En el corazón de la<br />
             Ruta del Vino
           </h2>
@@ -68,12 +71,18 @@
               </p>
             </div>
           </div>
+        </div>
 
-
-          
+        <div class="h-full md:flex md:justify-center hidden">
+          <img
+            src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749688388/inside-uco-mapa_hwlqlp.svg"
+            alt="img inside uco"
+          />
         </div>
       </div>
     </div>
+
+    
   </div>
 
   <style>
@@ -96,4 +105,8 @@
       }
     }
   </style>
+
+
+
+
 </section>

@@ -10,6 +10,9 @@ import WineRouteMap from "../components/WineRouteMap/WineRouteMap.astro";
 import BannerCabana from "../components/BannerCabaña/BannerCabaña.astro";
 import BannerWineFroz from "../components/BannerWineFroz/BannerWineFroz.astro";
 import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro";
+import WineRouteMapDesk from "@/components/WineRouteMap/WineRouteMapDesk.astro";
+import WineRouteMapMob from "@/components/WineRouteMapMob/WineRouteMapMob.astro";
+import MapMob from "@/components/MapMob/MapMob.astro";
 ---
 
 <Layout title="Inside Uco">
@@ -96,8 +99,12 @@ import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro
   />
 
   <BannerCabana />
-  <WineRouteMap />
-  <BannerHeroImage src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749243663/pileta-min_cgwxhh.jpg" />
+  <WineRouteMapDesk />
+  <WineRouteMapMob />
+  <MapMob/>
+  <BannerHeroImage
+    src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749243663/pileta-min_cgwxhh.jpg"
+  />
   <Logos />
   <ContactForm client:load />
   <Footer />

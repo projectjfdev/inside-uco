@@ -3,10 +3,11 @@
 const {src} = Astro.props
 ---
 
-<section class="h-screen md:h-[90vh]">
+<section class="h-[282px] md:h-[90vh]">
   <img
     src={src}
     alt="montañas y una piscina"
-    class="w-full h-full object-cover"
+    class="h-[282px] w-full md:h-full object-cover"
+    style="max-width: 100%;"
   />
 </section>

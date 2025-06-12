@@ -42,7 +42,6 @@ export default function MobileNav() {
     { label: "Casas", href: "#casas" },
     { label: "Fincas", href: "#fincas" },
     { label: "Gualtallary", href: "#gualtallary" },
-    { label: "Contacto", href: "#contacto" },
   ];
 
   const toggleMenu = () => {
@@ -50,14 +49,10 @@ export default function MobileNav() {
   };
 
   return (
-    <div className="relative md:hidden">
-      {/* Header Bar */}
-      <header className=" fixed top-0 left-0 right-0 z-50 bg-[#282627] backdrop-blur-md ">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div className="flex gap-3 items-center">
-            <img src="./logo-nav.png" alt="" className="w-[175px]" />
-          </div>
-
+    <div className="relative lg:hidden">
+      {/* Header Bar bg-[#282627] */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black  backdrop-blur-md w-full">
+        <div className="relative flex items-center justify-between px-6 py-4">
           {/* Hamburger Button */}
           <button
             onClick={toggleMenu}
@@ -88,6 +83,11 @@ export default function MobileNav() {
               />
             </div>
           </button>
+
+          {/* Logo centrado absolutamente */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <img src="./logo-nav.png" alt="Logo" className="w-[175px]" />
+          </div>
         </div>
       </header>
 
@@ -99,7 +99,7 @@ export default function MobileNav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-lg"
+            className="fixed inset-0 z-40 bg-[#282627]  backdrop-blur-lg pt-36 flex justify-center "
             role="dialog"
             aria-modal="true"
             aria-label="Menú de navegación principal"
@@ -110,10 +110,10 @@ export default function MobileNav() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-              className="flex flex-col items-center justify-center h-full px-8 pt-24"
+              className="flex flex-col justify-between items-center h-full w-full px-8 pb-10"
             >
-              <nav className="w-full max-w-md">
-                <ul className="space-y-2">
+              <nav className="w-full max-w-md ">
+                <ul className="space-y-2 text-center">
                   {menuItems.map((item, index) => (
                     <motion.li
                       key={item.label}
@@ -142,66 +142,36 @@ export default function MobileNav() {
                 </ul>
               </nav>
 
-              {/* Additional Info */}
-              <motion.div
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 30, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: 0.5 }}
-                className="mt-16 text-center"
-              >
-                <p
-                  style={{ fontFamily: "NolanNextRegular" }}
-                  className="text-white/60 text-sm mb-4 tracking-wide"
-                >
-                  Contáctanos
-                </p>
-                <div className="space-y-2">
-                  <p
-                    style={{ fontFamily: "NolanNextRegular" }}
-                    className="text-white/80 text-lg font-light"
-                  >
-                    +1 (555) 123-4567
-                  </p>
-                  <p className="text-white/80 text-lg font-light">
-                    <a
-                      style={{ fontFamily: "NolanNextRegular" }}
-                      href="mailto:info@insideuco.com.ar"
-                      className="hover:text-gray-400"
-                    >
-                      info@insideuco.com.ar
-                    </a>
-                  </p>
-                </div>
-              </motion.div>
-
               {/* Social Links */}
               <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 30, opacity: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
-                className="mt-12 flex space-x-8"
+                className="mb-20 flex space-x-8"
               >
-                {["Instagram", "Facebook", "LinkedIn"].map((social, index) => (
-                  <motion.a
-                  style={{ fontFamily: "NolanNextRegular" }}
-                    key={social}
-                    href={
-                      social === "Facebook"
-                        ? "https://www.facebook.com/uco.wineshop"
-                        : social === "Instagram"
-                        ? "https://www.instagram.com/casadeuco"
-                        : "https://ar.linkedin.com/company/casa-de-uco-vineyards-&-wine-resort" // link por defecto
-                    }
-                    target="_blank"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="text-white/60 hover:text-white transition-colors duration-200 text-sm tracking-widest uppercase focus:outline-none focus:text-white focus:ring-2 focus:ring-white/30 rounded px-2 py-1"
-                  >
-                    {social}
-                  </motion.a>
-                ))}
+                <a
+                  href="#contacto"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevení el scroll automático
+                    setIsOpen(false);
+
+                    // Espera 300ms a que cierre la animación antes de hacer scroll
+                    setTimeout(() => {
+                      const target = document.getElementById("contacto");
+                      if (target) {
+                        target.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }, 300);
+                  }}
+                  style={{
+                    fontFamily: "NolanNextRegular",
+                    fontWeight: "200",
+                  }}
+                  className="block w-full bg-white text-black text-3xl md:text-4xl font-light tracking-wide py-4 px-6 cursor-pointer transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
+                >
+                  Contacto
+                </a>
               </motion.div>
             </motion.div>
 

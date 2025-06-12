@@ -2,6 +2,7 @@ import type React from "react";
 
 import { useState } from "react";
 import { Toaster, toast } from "sonner";
+import MainTitle from "../MainTitle/Maintitle";
 
 interface FormData {
   nombre: string;
@@ -97,9 +98,8 @@ export default function ContactForm() {
         success: false,
         error: "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
       });
-       toast.error("Error al enviar su consulta", {
-        description:
-          "Hubo un problema al enviar su consulta ",
+      toast.error("Error al enviar su consulta", {
+        description: "Hubo un problema al enviar su consulta ",
         duration: 10000,
         action: {
           label: "X",
@@ -116,18 +116,15 @@ export default function ContactForm() {
       <div className="md: w-[80vw] mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h2
-            style={{ fontFamily: "NolanNextBold" }}
-            className="text-4xl md:text-[40px] font-bold mb-2"
+          <MainTitle title="Contacto" classname="mb-2" />
+          <p
+            style={{ fontFamily: "NolanNextRegular" }}
+            className="text-xl md:text-[25px]"
           >
-            Contacto
-          </h2>
-          <p style={{ fontFamily: "NolanNextRegular" }} className="text-xl md:text-[25px]">
             Completá el formulario para solicitar una entrevista exclusiva
           </p>
         </div>
 
-   
         {/* {status.success && (
           <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
             ¡Mensaje enviado exitosamente! Te contactaremos pronto.
