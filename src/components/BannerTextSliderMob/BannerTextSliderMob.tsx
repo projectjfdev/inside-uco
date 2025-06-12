@@ -96,7 +96,7 @@ export default function BannerTextSlider({
               </button>
 
               {/* Dot Indicators */}
-              <div className="flex space-x-2 z-10 ">
+             <div className="flex space-x-2 z-10 bg-black/50 p-2 rounded-full backdrop-blur-sm">
                 {images.map((_, index) => (
                   <button
                     key={index}
