@@ -34,8 +34,8 @@ export default function BannerTextSlider({
   };
 
   return (
-    <div id={id} className="min-h-screen hidden md:flex md:flex-col lg:flex-row scroll-mt-20 md:scroll-mt-0">
-      {/* Left Content Section  https://res.cloudinary.com/dijfs2fcy/image/upload/v1749733916/slider1_bpescw.jpg*/}
+    <div id={id} className="min-h-screen flex flex-col lg:flex-row scroll-mt-20 md:scroll-mt-0 md:hidden">
+      {/* Left Content Section  */}
       <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center py-16 px-8 lg:p-16 ">
         <div className="max-w-md space-y-8">
           <div className="space-y-2">
@@ -48,7 +48,7 @@ export default function BannerTextSlider({
             </h2>
           </div>
 
-          <ul className="space-y-3 text-gray-800">
+          <ul className="pb-6 text-gray-800">
             {features.map((feature, index) => (
               <li className="flex items-center" key={features[index]}>
                 <span className="mr-3 md:mt-2 w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0"></span>
@@ -72,7 +72,7 @@ export default function BannerTextSlider({
       </div>
 
       {/* Right Image Slider Section */}
-      <div className="lg:w-1/2 relative h-[100vh] lg:h-screen">
+      <div className="lg:w-1/2 relative h-[390px]  lg:h-screen">
         <div className="relative w-full h-full overflow-hidden flex flex-col items-end justify-end">
           <img
             src={images[currentImage] || "/placeholder.svg"}
@@ -87,7 +87,7 @@ export default function BannerTextSlider({
 
               <button
                 onClick={prevImage}
-                className="w-12 h-12 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
+                className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6 cursor-pointer" />
@@ -99,7 +99,7 @@ export default function BannerTextSlider({
                   <button
                     key={index}
                     onClick={() => goToImage(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    className={`w-2 h-2 rounded-full transition-colors ${
                       index === currentImage
                         ? "bg-white"
                         : "bg-white/50 hover:bg-white/75"
@@ -111,7 +111,7 @@ export default function BannerTextSlider({
 
               <button
                 onClick={nextImage}
-                className="w-12 h-12 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
+                className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6 cursor-pointer" />

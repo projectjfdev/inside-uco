@@ -1,11 +1,17 @@
 ---
 import Maintitle from "../MainTitle/Maintitle";
 
-// Alternative version if you have actual logo images
-// This version assumes you have logo image files
+
 ---
 
 <section class="bg-[#687a67] h-[90vh] md:h-auto md:py-24 px-6">
+  <!-- Section Title -->
+  <div class="relative top-20 mx-auto w-[80vw]">
+    <Maintitle
+      title="Equipo"
+      classname="text-white mb-2 text-start md:hidden"
+    />
+  </div>
   <div
     class="w-[80vw] mx-auto h-full flex flex-col gap-0 justify-center md:flex-none"
   >
@@ -13,63 +19,59 @@ import Maintitle from "../MainTitle/Maintitle";
     <div class="mb-12">
       <Maintitle
         title="Equipo"
-        classname="text-white mb-2 text-center md:text-start"
+        classname="text-white mb-2 text-start hidden md:flex"
       />
     </div>
 
     <!-- Partners/Companies Grid -->
     <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-center h-1/2"
+      class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-12 items-center h-1/2 mb-20"
     >
       <!-- KDS Kapital del Sur -->
-      <div class="flex justify-center md:justify-start">
-        <!-- If you have a logo image, uncomment this and comment the text version -->
-        <!-- <img src="/images/logos/kds-logo.png" alt="KDS Kapital del Sur" class="h-16 w-auto filter brightness-0 invert" /> -->
-
-        <!-- Text version -->
-        <div class="text-white">
+      <div
+        class="flex flex-col items-center md:flex-row h-full justify-center md:justify-start border-b border-white md:border-none"
+      >
+        <div class="text-white mb-10">
           <div class="flex items-center space-x-4">
             <img
               alt="KAPITAL DEL SUR"
               src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749687676/logo-kdt_nn2azz.svg"
-              width="350px"
+              class="w-[205px] md:w-[350px]"
             />
           </div>
         </div>
+
       </div>
 
       <!-- Winefroz -->
-      <div class="flex justify-center">
-        <!-- If you have a logo image, uncomment this and comment the text version -->
-        <!-- <img src="/images/logos/winefroz-logo.png" alt="Winefroz" class="h-12 w-auto filter brightness-0 invert" /> -->
-
+      <div
+        class="flex justify-center items-center flex-col h-full border-b border-white md:border-none py-20"
+      >
         <!-- Text version -->
         <div class="text-white">
           <img
             alt="winefroz"
             src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749687733/winefroz-svg_uy1qag.svg"
-            width="350px"
+            class="w-[205px] md:w-[350px]"
           />
         </div>
       </div>
 
       <!-- Castro Valenzuela Arquitectos -->
-      <div class="flex justify-center md:justify-end">
-        <!-- If you have a logo image, uncomment this and comment the text version -->
-        <!-- <img src="/images/logos/castro-valenzuela-logo.png" alt="Castro Valenzuela Arquitectos" class="h-16 w-auto filter brightness-0 invert" /> -->
-
+      <div class="flex justify-center md:justify-end pt-20 ">
         <!-- Text version -->
-        <div class="text-white flex items-center space-x-4">
+        <div class="text-white flex items-center space-x-4 ">
           <!-- Architectural Logo/Symbol -->
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center  ">
             <img
               alt="castro valenzuela"
               src="https://res.cloudinary.com/dijfs2fcy/image/upload/v1749687820/castro-svg_ps1px8.svg"
-              width="350px"
+              class="w-[205px] md:w-[350px]"
             />
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>

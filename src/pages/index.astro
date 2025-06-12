@@ -6,13 +6,13 @@ import Logos from "../components/Logos/Logos.astro";
 import ContactForm from "../components/Contact/ContactForm.tsx";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import BannerTextSlider from "../components/BannerTextSlider/BannerTextSlider";
-import WineRouteMap from "../components/WineRouteMap/WineRouteMap.astro";
 import BannerCabana from "../components/BannerCabaña/BannerCabaña.astro";
 import BannerWineFroz from "../components/BannerWineFroz/BannerWineFroz.astro";
 import BannerHeroImage from "../components/BannerHeroImage/BannerHeroImage.astro";
 import WineRouteMapDesk from "@/components/WineRouteMap/WineRouteMapDesk.astro";
 import WineRouteMapMob from "@/components/WineRouteMapMob/WineRouteMapMob.astro";
 import MapMob from "@/components/MapMob/MapMob.astro";
+import BannerTextSliderMob from "@/components/BannerTextSliderMob/BannerTextSliderMob";
 ---
 
 <Layout title="Inside Uco">
@@ -29,6 +29,26 @@ import MapMob from "@/components/MapMob/MapMob.astro";
   />
 
   <BannerTextSlider
+    id="bed-wine"
+    title="Bed & Wine"
+    subtitle="Suites"
+    features={[
+      "22 suites",
+      "Diseño integrado al paisaje",
+      "Piscina",
+      "Habitación + office",
+      "Galería con pérgola",
+      "Zonas de fuegos para compartir",
+    ]}
+    images={[
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749392536/slider1_ogtzc6.jpg",
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749392537/slider2_xxxomw.jpg",
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749392537/slider3_l0no30.jpg",
+    ]}
+    client:load
+  />
+
+  <BannerTextSliderMob
     id="bed-wine"
     title="Bed & Wine"
     subtitle="Suites"
@@ -67,6 +87,28 @@ import MapMob from "@/components/MapMob/MapMob.astro";
       "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393255/slider1_ffmhej.jpg",
       "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393255/slider2_phpvr2.jpg",
       "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393256/slider3_c8oyhf.jpg",
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393256/slider4_klnwmz.jpg",
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393258/slider5_xjnv4t.jpg",
+    ]}
+    client:load
+  />
+
+
+<BannerTextSliderMob
+    id="casas"
+    title="Casas"
+    subtitle="Wine Lodge"
+    features={[
+      "1 y 2 dormitorios",
+      "Para usar o alquilar",
+      "Inspiradas en la naturaleza",
+      "Funcionales, confortables y privadas",
+      "Tu casa Plug & Play, 100% equipada",
+    ]}
+    images={[
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749733916/slider1_bpescw.jpg",
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749734413/slider2_wlxz9r.jpg",
+      "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749735458/slider3_modeex.jpg",
       "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393256/slider4_klnwmz.jpg",
       "https://res.cloudinary.com/dijfs2fcy/image/upload/v1749393258/slider5_xjnv4t.jpg",
     ]}
