@@ -41,7 +41,7 @@ export default function MobileNav() {
     { label: "Bed & Wine ", href: "#bed-wine" },
     { label: "Casas", href: "#casas" },
     { label: "Fincas", href: "#fincas" },
-    { label: "Gualtallary", href: "#gualtallary" },
+    // { label: "Gualtallary", href: "#gualtallary" },
   ];
 
   const toggleMenu = () => {
@@ -139,6 +139,40 @@ export default function MobileNav() {
                       </a>
                     </motion.li>
                   ))}
+
+                  <motion.li
+                    initial={{ x: -30, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -30, opacity: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: "easeOut",
+                      delay: 0.2 + 4 * 0.05,
+                    }}
+                  >
+                    <a
+                      href="#gualtallarymob"
+                      onClick={(e) => {
+                        e.preventDefault(); // prevení el scroll automático
+                        setIsOpen(false);
+
+                        // Espera 300ms a que cierre la animación antes de hacer scroll
+                        setTimeout(() => {
+                          const target = document.getElementById("gualtallarymob");
+                          if (target) {
+                            target.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }, 300);
+                      }}
+                      className="block w-full text-white text-3xl md:text-4xl font-light tracking-wide py-4 px-6 rounded-lg hover:bg-[#282627] transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
+                      style={{
+                        fontFamily: "NolanNextRegular",
+                        fontWeight: "200",
+                      }}
+                    >
+                      Gualtallary
+                    </a>
+                  </motion.li>
                 </ul>
               </nav>
 
