@@ -175,6 +175,12 @@ export default function ContactForm() {
                   Email
                 </label>
                 <input
+                  onInvalid={(e) =>
+                    e.currentTarget.setCustomValidity(
+                      "Por favor, ingresá un email válido."
+                    )
+                  }
+                  onInput={(e) => e.currentTarget.setCustomValidity("")}
                   type="email"
                   id="email"
                   name="email"
@@ -222,6 +228,13 @@ export default function ContactForm() {
                   Número de teléfono
                 </label>
                 <input
+                  pattern="^[0-9]{8,15}$"
+                  onInvalid={(e) =>
+                    e.currentTarget.setCustomValidity(
+                      "Por favor, ingresa solo números (8 a 15 dígitos)"
+                    )
+                  }
+                  onInput={(e) => e.currentTarget.setCustomValidity("")}
                   type="tel"
                   id="telefono"
                   name="telefono"
