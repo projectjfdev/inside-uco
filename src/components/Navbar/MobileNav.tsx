@@ -98,7 +98,7 @@ export default function MobileNav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-[#282627]  backdrop-blur-lg pt-36 flex justify-center "
+            className="fixed inset-0 z-40 bg-[#282627]  backdrop-blur-lg pt-20 flex justify-center "
             role="dialog"
             aria-modal="true"
             aria-label="Menú de navegación principal"
@@ -109,7 +109,7 @@ export default function MobileNav() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-              className="flex flex-col justify-between items-center h-full w-full px-8 pb-10"
+              className="flex flex-col justify-around items-center h-full w-full px-8 pb-10"
             >
               <nav className="w-full max-w-md ">
                 <ul className="space-y-2 text-center">

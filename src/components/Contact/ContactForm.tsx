@@ -112,8 +112,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contacto" className="bg-[#d8d4ca] py-28 ">
-      <div className="md: w-[80vw] mx-auto">
+    <section id="contacto" className="bg-[#d8d4ca] py-[52px] md:py-[96px] ">
+      <div className="px-[51px] md:px-[121px] mx-auto">
         {/* Header */}
         <div className="mb-8">
           <MainTitle title="Contacto" classname="mb-2" />

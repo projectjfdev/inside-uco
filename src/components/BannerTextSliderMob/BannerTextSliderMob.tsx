@@ -36,10 +36,10 @@ export default function BannerTextSlider({
   return (
     <div
       id={id}
-      className="min-h-screen flex flex-col lg:flex-row scroll-mt-20 md:scroll-mt-0 md:hidden"
+      className="  flex flex-col  lg:flex-row scroll-mt-20 md:scroll-mt-0 md:hidden"
     >
       {/* Left Content Section  */}
-      <div className="lg:w-1/2 bg-[#D7D5CC] flex items-center justify-center py-16 px-8 lg:p-16 ">
+      <div className="lg:w-1/2 bg-[#D7D5CC] md:flex md:items-center md:justify-center py-[52px] md:py-0 px-[51px] lg:p-16  ">
         <div className="max-w-md space-y-8">
           <div className="space-y-2">
             <MainTitle title={`${title}`} />
@@ -76,52 +76,53 @@ export default function BannerTextSlider({
       </div>
 
       {/* Right Image Slider Section */}
-      <div className="lg:w-1/2 relative h-[390px]  lg:h-screen">
-        <div className="relative w-full h-full overflow-hidden flex flex-col items-end justify-end">
-          <img
-            src={images[currentImage] || "/placeholder.svg"}
-            alt={`Suite image ${currentImage + 1}`}
-            className="object-cover w-full h-full"
+     {/* Right Image Slider Section */}
+{/* Right Image Slider Section */}
+<div className="lg:w-1/2 relative h-[400px] md:h-[500px] lg:h-screen overflow-hidden flex-shrink-0">
+  <div className="relative w-full h-full">
+    <img
+      src={images[currentImage] || "/placeholder.svg"}
+      alt={`Suite image ${currentImage + 1}`}
+      className="w-full h-full object-cover"
+    />
+
+    {/* Navegación + dots */}
+    <div className="absolute bottom-6 left-0 right-0 flex justify-around px-10 xl:px-40 z-10 items-center">
+      <button
+        onClick={prevImage}
+        className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
+        aria-label="Previous image"
+      >
+        <ChevronLeft className="w-6 h-6 cursor-pointer" />
+      </button>
+
+      <div className="flex space-x-2 z-10 bg-black/50 p-2 rounded-full backdrop-blur-sm">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToImage(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentImage
+                ? "bg-white"
+                : "bg-white/50 hover:bg-white/75"
+            }`}
+            aria-label={`Go to image ${index + 1}`}
           />
-
-          <div className="">
-            {/* Navigation Arrows (moved to bottom) */}
-            <div className="absolute bottom-6 left-0 right-0 flex justify-around px-20 xl:px-40 z-10 items-center">
-              <button
-                onClick={prevImage}
-                className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
-                aria-label="Previous image"
-              >
-                <ChevronLeft className="w-6 h-6 cursor-pointer" />
-              </button>
-
-              {/* Dot Indicators */}
-             <div className="flex space-x-2 z-10 bg-black/50 p-2 rounded-full backdrop-blur-sm">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToImage(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentImage
-                        ? "bg-white"
-                        : "bg-white/50 hover:bg-white/75"
-                    }`}
-                    aria-label={`Go to image ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={nextImage}
-                className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
-                aria-label="Next image"
-              >
-                <ChevronRight className="w-6 h-6 cursor-pointer" />
-              </button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
+
+      <button
+        onClick={nextImage}
+        className="w-9 h-9 rounded-full bg-black/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white hover:bg-black/40 transition-colors"
+        aria-label="Next image"
+      >
+        <ChevronRight className="w-6 h-6 cursor-pointer" />
+      </button>
+    </div>
+  </div>
+</div>
+
+
     </div>
   );
 }
