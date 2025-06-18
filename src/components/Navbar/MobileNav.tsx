@@ -203,7 +203,7 @@ export default function MobileNav() {
                   }}
                   className="block w-full bg-white text-black text-[26px] md:text-4xl tracking-wide py-2 px-5 cursor-pointer transition-all duration-250 ease-in-out hover:translate-x-2 focus:outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/30"
                 >
-                  Contacto
+                  <span className="relative top-[3px]">Contacto</span>
                 </a>
               </motion.div>
             </motion.div>

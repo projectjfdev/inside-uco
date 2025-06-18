@@ -140,7 +140,7 @@ export default function ContactForm() {
 
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-6 ">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Left Column */}
             <div className="space-y-6 md:col-span-3">
               {/* Nombre */}
@@ -249,7 +249,7 @@ export default function ContactForm() {
             </div>
 
             {/* Right Column */}
-            <div className="md:row-span-2 md:pl-6 md:col-span-6">
+            <div className="md:row-span-2 lg:pl-6 md:col-span-6">
               {/* Mensaje */}
               <div>
                 <label
